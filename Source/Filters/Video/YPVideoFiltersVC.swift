@@ -57,6 +57,9 @@ public class YPVideoFiltersVC: UIViewController, IsMediaFilterVC {
         trimBottomItem.textLabel.text = YPConfig.wordings.trim
         coverBottomItem.textLabel.text = YPConfig.wordings.cover
 
+        trimBottomItem.button.accessibilityIdentifier = "Trim"
+        coverBottomItem.button.accessibilityIdentifier = "Cover"
+
         trimBottomItem.button.addTarget(self, action: #selector(selectTrim), for: .touchUpInside)
         coverBottomItem.button.addTarget(self, action: #selector(selectCover), for: .touchUpInside)
         
