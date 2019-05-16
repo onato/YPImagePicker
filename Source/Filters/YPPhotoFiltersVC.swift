@@ -152,6 +152,7 @@ open class YPPhotoFiltersVC: UIViewController, IsMediaFilterVC, UIGestureRecogni
                 let ciImage = self.inputPhoto.originalImage.toCIImage(),
                 let modifiedFullSizeImage = applier(ciImage) {
                 self.inputPhoto.modifiedImage = modifiedFullSizeImage.toUIImage()
+                self.inputPhoto.filter = f.name
             } else {
                 self.inputPhoto.modifiedImage = nil
             }
